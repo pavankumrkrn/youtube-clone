@@ -1,0 +1,5 @@
+.video {
+  height: 100vh;
+  overflow-y: scroll;
+  box-sizing: border-box !important;
+}

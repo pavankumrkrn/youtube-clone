@@ -1,0 +1,25 @@
+.imgCardL {
+  max-height: 200px;
+}
+
+.rightbar {
+  height: 100vh;
+  border-left: 1px solid #ccc;
+}
+
+@media screen and (max-width: 1000px) {
+  .rightbar {
+    display: none !important;
+  }
+}
+
+.content {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.userIcon {
+  width: 250px !important;
+  height: 250px !important;
+}

@@ -1,0 +1,45 @@
+.sidebar {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  min-width: 250px;
+  max-width: 250px;
+  border-right: 1px solid#ccc;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  scrollbar-color: black !important;
+  overflow-y: scroll;
+}
+
+.actIcon {
+  color: red;
+  font-weight: bold;
+  background-color: rgb(179, 178, 178);
+}
+
+.actIcon > p {
+  color: black !important;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.footer {
+  margin-top: 300px;
+  margin-bottom: 80px;
+}
+
+.item {
+  display: flex;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #ccc;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+.main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.imgCard {
+  border-radius: 0px !important;
+  max-height: 250px;
+  transition: transform 100ms ease-in;
+  min-height: 250px;
+}
+
+.plus:hover {
+  font-size: 25px;
+}
+
+.videoTitle:hover {
+  text-decoration: underline;
+}
+
+.videoCard {
+  box-sizing: border-box;
+  max-height: auto;
+  min-height: 400px;
+  cursor: pointer;
+
+  border-radius: 0px !important;
+  border: none !important;
+}
+
+.imgCard:hover {
+  transform: scale(1.07);
+}

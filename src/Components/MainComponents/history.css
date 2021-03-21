@@ -1,0 +1,8 @@
+.hisCard {
+    border: 0px !important;
+}
+
+.hisImg {
+    min-width: 250px !important;
+    max-width: 250px !important;
+}

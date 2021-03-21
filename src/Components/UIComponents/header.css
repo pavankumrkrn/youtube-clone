@@ -1,0 +1,32 @@
+.yImg {
+  max-width: 100px;
+}
+
+.navbar {
+  background-color: white !important;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  /* max-height: 80px; */
+}
+
+.navbarinput {
+  width: 500px;
+  border-radius: 0px !important;
+}
+
+.hIcon {
+  cursor: pointer;
+}
+
+.sIcon {
+  box-sizing: border-box;
+  border: 1px solid black;
+  height: 38px !important;
+  width: 50px !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  cursor: pointer;
+  border-radius: 2px;
+  border-color: #ccc;
+  background-color: #f8f8f8;
+}
