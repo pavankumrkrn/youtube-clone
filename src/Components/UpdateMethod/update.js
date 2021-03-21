@@ -33,4 +33,4 @@ const pushToHistory = async (user, video) => {
     }
 }
 
-module.exports = { update, pushToHistory }
+export default { update, pushToHistory }

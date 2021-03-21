@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory, useParams } from 'react-router';
 import { MyContext } from '../Context/MyContext';
-import { pushToHistory } from '../UpdateMethod/update';
+import update from '../UpdateMethod/update';
 import { items } from "./json";
 
 const Playlist = () => {
@@ -34,7 +34,7 @@ const Playlist = () => {
                                                                 <div className="card noBo">
                                                                     <img src={i.snippet.thumbnails.high.url} alt="" className="card-img-top"
                                                                         onClick={() => {
-                                                                            pushToHistory(value[0].user, i);
+                                                                            update.pushToHistory(value[0].user, i);
                                                                             push('/playvideo/' + i.id.videoId)
                                                                         }} /></div>
                                                             </div>
@@ -42,7 +42,7 @@ const Playlist = () => {
                                                                 <div className="card-text">
                                                                     <b className='videoTitle'
                                                                         onClick={() => {
-                                                                            pushToHistory(value[0].user, i);
+                                                                            update.pushToHistory(value[0].user, i);
                                                                             push('/playvideo/' + i.id.videoId)
                                                                         }}>
                                                                         {i.snippet.title}

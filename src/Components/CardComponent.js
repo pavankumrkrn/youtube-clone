@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router'
 import { MyContext } from './Context/MyContext'
-import { pushToHistory } from './UpdateMethod/update'
+import update from './UpdateMethod/update'
 
 const CardComponent = (props) => {
     const { push } = useHistory();
@@ -15,13 +15,13 @@ const CardComponent = (props) => {
                                 <div className="col-lg-3 col-md-6 mt-3" key={index}>
                                     <div className="card">
                                         <img src={i.snippet.thumbnails.high.url} alt="" className="card-img-top" onClick={() => {
-                                            pushToHistory(value[0].user, i);
+                                            update.pushToHistory(value[0].user, i);
                                             push('/playvideo/' + i.id.videoId)
                                         }} />
                                         <div className="card-body">
                                             <div className="card-text">
                                                 <b className='videoTitle' onClick={() => {
-                                                    pushToHistory(value[0].user, i);
+                                                    update.pushToHistory(value[0].user, i);
                                                     push('/playvideo/' + i.id.videoId)
                                                 }}>
                                                     {i.snippet.title.split('').slice(0, 15).join('') + ' ...'}

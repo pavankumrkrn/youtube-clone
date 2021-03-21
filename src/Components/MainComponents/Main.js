@@ -4,7 +4,7 @@ import { items } from "./json";
 import { MyContext } from '../Context/MyContext';
 import AddToPlaylist from '../UIComponents/AddToPlaylist';
 import { useHistory } from 'react-router';
-import { pushToHistory } from '../UpdateMethod/update';
+import update from '../UpdateMethod/update';
 import Loader from 'react-loader-spinner';
 const url = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&key=AIzaSyA8_QL_C34H63d5sT1vMn-JF3SXeo69GEk'
 const Main = (props) => {
@@ -46,7 +46,7 @@ const Main = (props) => {
                                                 <img src={i.snippet.thumbnails.high.url} alt=""
                                                     className="card-img-top imgCard"
                                                     onClick={() => {
-                                                        pushToHistory(value[0].user, i);
+                                                        update.pushToHistory(value[0].user, i);
                                                         push('/playvideo/' + i.id.videoId)
                                                     }
                                                     } />
@@ -54,7 +54,7 @@ const Main = (props) => {
                                                     <div className="card-text mb-5">
                                                         <b className='videoTitle'
                                                             onClick={() => {
-                                                                pushToHistory(value[0].user, i);
+                                                                update.pushToHistory(value[0].user, i);
                                                                 push('/playvideo/' + i.id.videoId)
                                                             }}>
                                                             {i.snippet.title}

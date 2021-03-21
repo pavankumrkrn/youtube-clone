@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router';
-import { update } from './UpdateMethod/update'
+import update from './UpdateMethod/update'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { MyContext } from './Context/MyContext';
 import Loader from 'react-loader-spinner';
@@ -31,7 +31,7 @@ const AddToPlayListModal = (props) => {
             toggle();
         } else {
             usr.playlists[opt].push(video)
-            let response = await update(usr);
+            let response = await update.update(usr);
             console.log(response);
             if (response.code === 'green') {
                 setText('Video added successfully to this playlist');

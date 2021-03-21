@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
-import { update } from './UpdateMethod/update';
+import update from './UpdateMethod/update';
 import { MyContext } from './Context/MyContext';
 import Loader from 'react-loader-spinner';
 import AlertModal from './AlertModal';
@@ -24,7 +24,7 @@ const NewPlaylist = (props) => {
         if (!flag) {
             value.playlists[name] = [];
             let user = value;
-            const response = await update(user);
+            const response = await update.update(user);
             if (response.code === 'green') {
                 setText('Playlist created successfully');
                 toggle();

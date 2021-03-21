@@ -17,15 +17,22 @@ export const Header = (props) => {
     const [open, setOpen] = React.useState(false)
     const [text, setText] = React.useState('');
     const { push } = useHistory();
-
+    const toggle = () => setModal(!modal);
+    const handle = () => setOpen(!open)
     const handleSearch = () => {
         if (text.trim() !== '') {
             push('/search/' + text)
         }
     }
 
-    const toggle = () => setModal(!modal);
-    const handle = () => setOpen(!open)
+    React.useEffect(() => {
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        })
+    }, [])
+
     return (
         <MyContext.Consumer>
             {(value) => {
@@ -34,7 +41,6 @@ export const Header = (props) => {
                         <nav className="navbar sticky-top">
                             <div className=""
                                 onClick={() => {
-                                    console.log('hi')
                                     props.setClose(!props.close)
                                 }}>
                                 <MenuIcon className='hIcon' />

@@ -4,7 +4,7 @@ import { MyContext } from '../Context/MyContext';
 import AddToPlaylist from '../UIComponents/AddToPlaylist';
 import { useHistory } from 'react-router';
 import Loader from 'react-loader-spinner';
-import { pushToHistory } from '../UpdateMethod/update';
+import update from '../UpdateMethod/update';
 const Trending = () => {
     const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=trend&maxResults=30&key=AIzaSyA8_QL_C34H63d5sT1vMn-JF3SXeo69GEk`;
     const [videoCards, setVideoCards] = React.useState([]);
@@ -49,14 +49,14 @@ const Trending = () => {
                                                                     src={i.snippet.thumbnails.high.url} alt=""
                                                                     className="card-img-top"
                                                                     onClick={() => {
-                                                                        pushToHistory(value[0].user, i);
+                                                                        update.pushToHistory(value[0].user, i);
                                                                         push('/playvideo/' + i.id.videoId)
                                                                     }} /></div>
                                                         </div>
                                                         <div className="col-sm-6 mt-3">
                                                             <div className="card-text">
                                                                 <b className='videoTitle' onClick={() => {
-                                                                    pushToHistory(value[0].user, i);
+                                                                    update.pushToHistory(value[0].user, i);
                                                                     push('/playvideo/' + i.id.videoId)
                                                                 }}>
                                                                     {i.snippet.title}
