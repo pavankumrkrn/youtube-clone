@@ -44,6 +44,10 @@ img:hover {
     margin-top: 60px !important;
   }
 
+  .micn {
+    display: none;
+  }
+
   .avatar {
     padding-right: 10px !important;
   }

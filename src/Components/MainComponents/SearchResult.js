@@ -41,7 +41,7 @@ const SearchResult = () => {
                                 {items.filter((i) => i.snippet.title !== i.snippet.channelTitle).map((i, index) => {
                                     return (
                                         <>
-                                            <div className="row pt-5" key={index}>
+                                            <div className="row pt-5" key={index + 'sr'}>
                                                 <div className="card col-sm-12 hisCard">
                                                     <div className="row">
                                                         <div className="col-lg-3 col-md-3 col-sm-12">

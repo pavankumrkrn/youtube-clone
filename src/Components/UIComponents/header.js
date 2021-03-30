@@ -27,8 +27,8 @@ export const Header = (props) => {
 
     React.useEffect(() => {
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                handleSearch();
+            if (e.key === 'Enter' && text.trim() !== '') {
+                push('/search/' + text)
             }
         })
     }, [])
@@ -45,7 +45,7 @@ export const Header = (props) => {
                                 }}>
                                 <MenuIcon className='hIcon' />
                             </div>
-                            <a className="navbar-brand" onClick={
+                            <a className="navbar-brand micn" onClick={
                                 () => push('/home')
                             }><img src="https://streamingwars.com/wp-content/uploads/2020/02/Screenshot-2020-02-15-at-22.12.47.png" className='yImg ml-4' alt="" /></a>
                             <ul className="navbar-nav mr-auto ml-auto">
